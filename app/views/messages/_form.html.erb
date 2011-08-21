@@ -1,0 +1,6 @@
+<%= form_for @message, :remote => true  do |f| %>
+  <p>
+    <%= f.text_field :content %>
+  </p>
+  <p><%= f.submit "Send Message" %></p>
+<% end %>

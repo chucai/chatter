@@ -1,0 +1,1275 @@
+
+
+Started GET "/rails/info/properties" for 192.168.1.16 at 2011-08-21 10:53:42 +0800
+
+Mysql::Error (Unknown database 'chatter_development'):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (59.0ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (64.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateMessages (20110821024909)
+  [1m[35mSQL (43.6ms)[0m  CREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110821024909')[0m
+  [1m[35mSQL (4.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `messages`
+
+
+Started GET "/rails/info/properties" for 192.168.1.16 at 2011-08-21 10:54:13 +0800
+  Processing by Rails::InfoController#properties as 
+  [1m[36mSQL (6.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Rendered inline template (0.2ms)
+Completed 200 OK in 85ms (Views: 1.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/rails/info/properties" for 192.168.1.16 at 2011-08-21 10:54:15 +0800
+  Processing by Rails::InfoController#properties as 
+Rendered inline template (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/message" for 192.168.1.16 at 2011-08-21 10:54:20 +0800
+
+ActionController::RoutingError (No route matches "/message"):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 10:54:23 +0800
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.5ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/index.html.erb within layouts/application (33.6ms)
+Completed   in 100ms
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x98e331c>:0x98d8fc0>):
+    1: <% title "Messages" %>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/messages/index.html.erb:1:in `_app_views_messages_index_html_erb__1065461856_80134460_638494009'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 10:55:03 +0800
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.5ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 117ms (Views: 5.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 10:55:13 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (7.0ms)
+Rendered messages/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 25ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 11:32:00 +0800
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (18.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 82ms (Views: 3.7ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:32:03 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (6.0ms)
+Rendered messages/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 58ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.1.16 at 2011-08-21 11:32:39 +0800
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (8.2ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 5.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:32:49 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (3.0ms)
+Rendered messages/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:36:06 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (7.0ms)
+Rendered messages/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:42:49 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/new.html.erb within layouts/application (24.2ms)
+Completed   in 42ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <% title "及时聊天" %>
+    2: <ul id="chat">
+    3:   <%= render @messages %>
+    4: </ul>
+    5: <%= render 'form' %>
+  app/views/messages/new.html.erb:3:in `_app_views_messages_new_html_erb__213657020_79608600__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:42:50 +0800
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[36mSQL (1.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (5.9ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('', '2011-08-21 03:42:50', '2011-08-21 03:42:50')
+  [1m[36mSQL (1.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.21/messages/1
+Completed 302 Found in 40ms
+
+
+Started GET "/messages/1" for 192.168.1.16 at 2011-08-21 11:42:50 +0800
+  Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMessage Load (0.2ms)[0m  SELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 1 LIMIT 1
+Rendered messages/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 34ms (Views: 10.5ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:42:55 +0800
+  Processing by MessagesController#new as HTML
+Rendered messages/new.html.erb within layouts/application (0.7ms)
+Completed   in 14ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <% title "及时聊天" %>
+    2: <ul id="chat">
+    3:   <%= render @messages %>
+    4: </ul>
+    5: <%= render 'form' %>
+  app/views/messages/new.html.erb:3:in `_app_views_messages_new_html_erb__213657020_79167680__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:43:55 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (2.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/new.html.erb within layouts/application (39.0ms)
+Completed   in 71ms
+
+ActionView::Template::Error (Missing partial messages/message with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+    1: <% title "及时聊天" %>
+    2: <ul id="chat">
+    3:   <%= render @messages %>
+    4: </ul>
+    5: <%= render 'form' %>
+  app/views/messages/new.html.erb:3:in `_app_views_messages_new_html_erb__213657020_78252950__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:44:55 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.1ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (9.6ms)
+Rendered messages/_form.html.erb (10.0ms)
+Rendered messages/new.html.erb within layouts/application (22.0ms)
+Completed   in 39ms
+
+ActionView::Template::Error (undefined method `text_area_field' for #<ActionView::Helpers::FormBuilder:0x96e7180>):
+    1: <%= form_for @message, :remote => true do |f| %>
+    2:   <p>
+    3:     <%= f.text_area_field :content %>
+    4:   </p>
+    5:   <p><%= f.submit %></p>
+    6: <% end %>
+  app/views/messages/_form.html.erb:3:in `block in _app_views_messages__form_html_erb__546148410_79142830_354661866'
+  app/views/messages/_form.html.erb:1:in `_app_views_messages__form_html_erb__546148410_79142830_354661866'
+  app/views/messages/new.html.erb:5:in `_app_views_messages_new_html_erb__213657020_79279580__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:49:58 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (6.9ms)
+Rendered messages/_form.html.erb (2.8ms)
+Rendered messages/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 35ms (Views: 21.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:52:37 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[35mSQL (4.4ms)[0m  SHOW TABLES
+Completed   in 14ms
+
+NoMethodError (undefined method `validetes' for #<Class:0x97f9618>):
+  app/models/message.rb:3:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/controllers/messages_controller.rb:16:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:52:40 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[36mSQL (6.5ms)[0m  [1mSHOW TABLES[0m
+Completed   in 12ms
+
+NoMethodError (undefined method `validetes' for #<Class:0x9674518>):
+  app/models/message.rb:3:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/controllers/messages_controller.rb:16:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:52:41 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[35mSQL (11.6ms)[0m  SHOW TABLES
+Completed   in 18ms
+
+NoMethodError (undefined method `validetes' for #<Class:0x94b57b8>):
+  app/models/message.rb:3:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/controllers/messages_controller.rb:16:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:52:41 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[36mSQL (3.2ms)[0m  [1mSHOW TABLES[0m
+Completed   in 15ms
+
+NoMethodError (undefined method `validetes' for #<Class:0x97e5a14>):
+  app/models/message.rb:3:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/controllers/messages_controller.rb:16:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:52:42 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[35mSQL (4.5ms)[0m  SHOW TABLES
+Completed   in 14ms
+
+NoMethodError (undefined method `validetes' for #<Class:0x964e46c>):
+  app/models/message.rb:3:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/controllers/messages_controller.rb:16:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:53:16 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.0ms)
+Rendered messages/_form.html.erb (1.1ms)
+Rendered messages/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 29ms (Views: 14.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:53:18 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.9ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+Completed   in 26ms
+
+ActionView::MissingTemplate (Missing template messages/new with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", "*/*"], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+  app/controllers/messages_controller.rb:20:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:53:35 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>""}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.3ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m
+Completed   in 20ms
+
+ActionView::MissingTemplate (Missing template messages/new with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", "*/*"], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+  app/controllers/messages_controller.rb:20:in `create'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 11:56:18 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (2.5ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (2.0ms)
+Rendered messages/_form.html.erb (41.0ms)
+Rendered messages/new.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 65ms (Views: 50.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 11:56:23 +0800
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"鹅鹅鹅分v"}, "commit"=>"Create Message"}
+  [1m[36mSQL (2.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  describe `messages`
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('鹅鹅鹅分v', '2011-08-21 03:56:23', '2011-08-21 03:56:23')[0m
+  [1m[35mSQL (5.3ms)[0m  COMMIT
+Redirected to http://192.168.1.21/messages/new
+Completed 406 Not Acceptable in 32ms
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 11:56:41 +0800
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (5.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 30ms (Views: 11.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:24:06 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (20.0ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (3.0ms)
+Rendered messages/_form.html.erb (6.0ms)
+Rendered messages/new.html.erb within layouts/application (30.0ms)
+Completed   in 87ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79587960__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:24:16 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (8.0ms)
+Rendered messages/_form.html.erb (2.7ms)
+Rendered messages/new.html.erb within layouts/application (19.9ms)
+Completed   in 108ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_78440640__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:24:18 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (2.2ms)
+Rendered messages/_form.html.erb (4.7ms)
+Rendered messages/new.html.erb within layouts/application (10.1ms)
+Completed   in 34ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79929070__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:27:02 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (1.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (4.0ms)
+Rendered messages/_form.html.erb (3.0ms)
+Rendered messages/new.html.erb within layouts/application (15.1ms)
+Completed   in 41ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_78836180__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 12:31:07 +0800
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (3.7ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 33ms (Views: 16.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 12:31:08 +0800
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (4.5ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 27ms (Views: 11.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/messages/2" for 192.168.1.16 at 2011-08-21 12:31:09 +0800
+  Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMessage Load (2.1ms)[0m  SELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1
+Rendered messages/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/messages/2/edit" for 192.168.1.16 at 2011-08-21 12:31:12 +0800
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMessage Load (19.0ms)[0m  [1mSELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1[0m
+Rendered messages/_form.html.erb (33.0ms)
+Rendered messages/edit.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 116ms (Views: 49.0ms | ActiveRecord: 19.0ms)
+
+
+Started POST "/messages/2" for 192.168.1.16 at 2011-08-21 12:31:15 +0800
+  Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"鹅鹅鹅分v"}, "commit"=>"Update Message", "id"=>"2"}
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (2.2ms)[0m  UPDATE `messages` SET `content` = '鹅鹅鹅分v', `updated_at` = '2011-08-21 04:31:15' WHERE `messages`.`id` = 2
+  [1m[36mSQL (114.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.21/messages/2
+Completed 302 Found in 149ms
+
+
+Started GET "/messages/2" for 192.168.1.16 at 2011-08-21 12:31:15 +0800
+  Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMessage Load (0.2ms)[0m  SELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1
+Rendered messages/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 25ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages" for 192.168.1.16 at 2011-08-21 12:31:18 +0800
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 23ms (Views: 14.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:31:20 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.0ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (4.9ms)
+Rendered messages/_form.html.erb (2.1ms)
+Rendered messages/new.html.erb within layouts/application (10.4ms)
+Completed   in 26ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79673430__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:32:18 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (1.6ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (2.2ms)
+Rendered messages/_form.html.erb (1.5ms)
+Rendered messages/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 31ms (Views: 14.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:41:19 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (12.7ms)
+Rendered messages/_form.html.erb (5.3ms)
+Rendered messages/new.html.erb within layouts/application (22.8ms)
+Completed   in 44ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79876230__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.3ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:41:20 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (2.4ms)
+Rendered messages/_form.html.erb (2.7ms)
+Rendered messages/new.html.erb within layouts/application (10.4ms)
+Completed   in 39ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_78755430__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:41:54 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.0ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (4.6ms)
+Rendered messages/_form.html.erb (2.0ms)
+Rendered messages/new.html.erb within layouts/application (13.2ms)
+Completed   in 41ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_75259270__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.8ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:41:55 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.1ms)
+Rendered messages/_form.html.erb (6.3ms)
+Rendered messages/new.html.erb within layouts/application (16.5ms)
+Completed   in 33ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79816430__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:53:35 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (4.8ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (3.0ms)
+Rendered messages/_form.html.erb (1.5ms)
+Rendered messages/new.html.erb within layouts/application (10.0ms)
+Completed   in 43ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_78272850__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:53:36 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.5ms)
+Rendered messages/_form.html.erb (2.8ms)
+Rendered messages/new.html.erb within layouts/application (10.7ms)
+Completed   in 31ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_73964920__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (54.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.5ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:53:36 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.5ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (5.9ms)
+Rendered messages/_form.html.erb (1.2ms)
+Rendered messages/new.html.erb within layouts/application (13.2ms)
+Completed   in 33ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_79671980__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.2ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:53:53 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (1.5ms)
+Rendered messages/_form.html.erb (4.0ms)
+Rendered messages/new.html.erb within layouts/application (11.0ms)
+Completed   in 32ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1070086644_78111200__239647817'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.9ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 12:54:18 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (5.7ms)
+Rendered messages/_form.html.erb (3.9ms)
+Rendered messages/new.html.erb within layouts/application (44.5ms)
+Completed   in 175ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__402347533_84095640_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:05:10 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (4.1ms)
+Rendered messages/_form.html.erb (2.7ms)
+Rendered messages/new.html.erb within layouts/application (18.7ms)
+Completed   in 46ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__402347533_82781500_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:05:10 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.9ms)
+Rendered messages/_form.html.erb (2.2ms)
+Rendered messages/new.html.erb within layouts/application (10.9ms)
+Completed   in 26ms
+
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT):
+    13:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    14:       <% end %>
+    15:       <%= content_tag :h1, yield(:title) if show_title? %>
+    16:       <%= yield %>
+    17:     </div>
+    18:   </body>
+    19: </html>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__402347533_84497210_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:06:07 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.9ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (4.1ms)
+Rendered messages/_form.html.erb (3.2ms)
+Rendered messages/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 33ms (Views: 18.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:06:11 +0800
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"eee "}, "commit"=>"Create Message"}
+  [1m[36mSQL (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (3.0ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('eee ', '2011-08-21 05:06:11', '2011-08-21 05:06:11')
+  [1m[36mSQL (42.0ms)[0m  [1mCOMMIT[0m
+Completed   in 81ms
+
+ActionView::MissingTemplate (Missing template messages/create with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:06:49 +0800
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"eee "}, "commit"=>"Create Message"}
+  [1m[35mSQL (0.8ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('eee ', '2011-08-21 05:06:49', '2011-08-21 05:06:49')
+  [1m[36mSQL (1.6ms)[0m  [1mCOMMIT[0m
+Completed   in 23ms
+
+ActionView::MissingTemplate (Missing template messages/create with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:06:51 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (4.0ms)
+Rendered messages/_form.html.erb (1.5ms)
+Rendered messages/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 26ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:06:53 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"eee "}, "commit"=>"Create Message"}
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  describe `messages`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('eee ', '2011-08-21 05:06:53', '2011-08-21 05:06:53')[0m
+  [1m[35mSQL (48.0ms)[0m  COMMIT
+Completed   in 79ms
+
+ActionView::MissingTemplate (Missing template messages/create with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:js, "application/ecmascript", "application/x-ecmascript", "*/*"], :locale=>[:en, :en]} in view paths "/var/www/chatter/app/views"):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:08:22 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (2.4ms)
+Rendered messages/_form.html.erb (3.0ms)
+Rendered messages/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:08:27 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"hbao "}, "commit"=>"Create Message"}
+  [1m[35mSQL (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('hbao ', '2011-08-21 05:08:27', '2011-08-21 05:08:27')
+  [1m[36mSQL (24.5ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.8ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 46ms (Views: 5.0ms | ActiveRecord: 26.9ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:08:31 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"什么啊"}, "commit"=>"Create Message"}
+  [1m[35mSQL (2.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('什么啊', '2011-08-21 05:08:31', '2011-08-21 05:08:31')
+  [1m[36mSQL (27.1ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.9ms)
+Rendered messages/create.js.erb (1.6ms)
+Completed 200 OK in 56ms (Views: 4.7ms | ActiveRecord: 30.5ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:08:33 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"晕。"}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('晕。', '2011-08-21 05:08:33', '2011-08-21 05:08:33')
+  [1m[36mSQL (44.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.1ms)
+Rendered messages/create.js.erb (2.3ms)
+Completed 200 OK in 70ms (Views: 5.5ms | ActiveRecord: 46.2ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:08:35 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"还真行"}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.9ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('还真行', '2011-08-21 05:08:35', '2011-08-21 05:08:35')
+  [1m[36mSQL (17.3ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.9ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 5.1ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:09:55 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.0ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (3.0ms)
+Rendered messages/_form.html.erb (1.0ms)
+Rendered messages/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 77ms (Views: 10.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:10:28 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.4ms)
+Rendered messages/_form.html.erb (5.7ms)
+Rendered messages/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 32ms (Views: 15.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (11.5ms)[0m  CREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.2ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (33.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110821024909')[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:10:58 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.9ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered collection (0.3ms)
+Rendered messages/_form.html.erb (4.0ms)
+Rendered messages/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 25ms (Views: 11.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:11:15 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered collection (0.7ms)
+Rendered messages/_form.html.erb (3.0ms)
+Rendered messages/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 29ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:20 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"什么"}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.9ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('什么', '2011-08-21 05:11:20', '2011-08-21 05:11:20')
+  [1m[36mSQL (2.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.8ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 30ms (Views: 6.0ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:22 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"好啊"}, "commit"=>"Create Message"}
+  [1m[35mSQL (2.5ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('好啊', '2011-08-21 05:11:22', '2011-08-21 05:11:22')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (1.3ms)
+Rendered messages/create.js.erb (2.6ms)
+Completed 200 OK in 26ms (Views: 7.3ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:23 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"呵呵"}, "commit"=>"Create Message"}
+  [1m[35mSQL (2.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('呵呵', '2011-08-21 05:11:23', '2011-08-21 05:11:23')
+  [1m[36mSQL (15.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.3ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 4.8ms | ActiveRecord: 18.3ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:25 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"我喜欢"}, "commit"=>"Create Message"}
+  [1m[35mSQL (2.4ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('我喜欢', '2011-08-21 05:11:25', '2011-08-21 05:11:25')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.2ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 27ms (Views: 5.1ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:28 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"就是快"}, "commit"=>"Create Message"}
+  [1m[35mSQL (1.6ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.9ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('就是快', '2011-08-21 05:11:28', '2011-08-21 05:11:28')
+  [1m[36mSQL (1.6ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.9ms)
+Rendered messages/create.js.erb (2.2ms)
+Completed 200 OK in 34ms (Views: 5.5ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 13:11:30 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"啦啦"}, "commit"=>"Create Message"}
+  [1m[35mSQL (3.8ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('啦啦', '2011-08-21 05:11:30', '2011-08-21 05:11:30')
+  [1m[36mSQL (1.4ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (1.3ms)
+Rendered messages/create.js.erb (3.1ms)
+Completed 200 OK in 29ms (Views: 5.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:16:37 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (1.7ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (3.1ms)
+Rendered messages/_form.html.erb (1.1ms)
+Rendered messages/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 30ms (Views: 14.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 13:17:19 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (2.2ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.7ms)
+Rendered messages/_form.html.erb (1.1ms)
+Rendered messages/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 29ms (Views: 14.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:01:00 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (11.0ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (15.9ms)
+Rendered messages/_form.html.erb (1.6ms)
+Rendered messages/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 49ms (Views: 24.8ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:01:09 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioYUmetiMDIEhVFuDuq0YxJVc0g5YkrVplvISKSYyJA=", "message"=>{"content"=>"eee"}, "commit"=>"Send Message"}
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `messages`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('eee', '2011-08-21 07:01:09', '2011-08-21 07:01:09')[0m
+  [1m[35mSQL (2.7ms)[0m  COMMIT
+Rendered messages/_message.html.erb (0.9ms)
+Rendered messages/create.js.erb (2.0ms)
+Completed 200 OK in 26ms (Views: 5.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:12:50 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (2.6ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (49.4ms)
+Rendered messages/_form.html.erb (2.9ms)
+Rendered messages/new.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 78ms (Views: 59.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:12:54 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.9ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (7.9ms)
+Rendered messages/_form.html.erb (1.1ms)
+Rendered messages/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 32ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:13:10 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.1ms)
+Rendered messages/_form.html.erb (2.0ms)
+Rendered messages/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 31ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:36:24 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (2.0ms)
+Rendered messages/_form.html.erb (2.0ms)
+Rendered messages/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 25ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:36:27 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (5.0ms)
+Rendered messages/_form.html.erb (5.4ms)
+Rendered messages/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 30ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:36:41 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"注意牙齿啊，兄弟。"}, "commit"=>"Send Message"}
+  [1m[35mSQL (2.7ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('注意牙齿啊，兄弟。', '2011-08-21 07:36:41', '2011-08-21 07:36:41')
+  [1m[36mSQL (59.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (1.1ms)
+Rendered messages/create.js.erb (9.6ms)
+Completed 200 OK in 93ms (Views: 12.9ms | ActiveRecord: 63.1ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:36:51 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioYUmetiMDIEhVFuDuq0YxJVc0g5YkrVplvISKSYyJA=", "message"=>{"content"=>"果然可以聊天。呵呵。"}, "commit"=>"Send Message"}
+  [1m[35mSQL (1.4ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('果然可以聊天。呵呵。', '2011-08-21 07:36:51', '2011-08-21 07:36:51')
+  [1m[36mSQL (43.5ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.8ms)
+Rendered messages/create.js.erb (7.3ms)
+Completed 200 OK in 74ms (Views: 11.1ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:45:59 +0800
+  Processing by MessagesController#new as HTML
+  [1m[35mMessage Load (3.1ms)[0m  SELECT `messages`.* FROM `messages`
+Rendered messages/_message.html.erb (45.2ms)
+Rendered messages/_form.html.erb (1.7ms)
+Rendered messages/new.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 88ms (Views: 52.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/messages/new" for 192.168.1.16 at 2011-08-21 15:46:04 +0800
+  Processing by MessagesController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages`[0m
+Rendered messages/_message.html.erb (3.2ms)
+Rendered messages/_form.html.erb (2.4ms)
+Rendered messages/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 33ms (Views: 15.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:11 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"哈哈"}, "commit"=>"Send Message"}
+  [1m[35mSQL (2.4ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('哈哈', '2011-08-21 07:46:11', '2011-08-21 07:46:11')
+  [1m[36mSQL (2.0ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (1.0ms)
+Rendered messages/create.js.erb (9.6ms)
+Completed   in 34ms
+
+ActionView::Template::Error (uninitialized constant ApplicationHelper::FAYE_TOKEN):
+    1: <% broadcast "/messages/new" do  %>
+    2: $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb___666819080_84345160_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:13 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"哈哈"}, "commit"=>"Send Message"}
+  [1m[35mSQL (1.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('哈哈', '2011-08-21 07:46:13', '2011-08-21 07:46:13')
+  [1m[36mSQL (2.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.6ms)
+Rendered messages/create.js.erb (8.4ms)
+Completed   in 34ms
+
+ActionView::Template::Error (uninitialized constant ApplicationHelper::FAYE_TOKEN):
+    1: <% broadcast "/messages/new" do  %>
+    2: $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb___666819080_83090420_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:25 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"哈哈"}, "commit"=>"Send Message"}
+  [1m[35mSQL (1.6ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('哈哈', '2011-08-21 07:46:25', '2011-08-21 07:46:25')
+  [1m[36mSQL (2.2ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.4ms)
+Rendered messages/create.js.erb (7.4ms)
+Completed   in 36ms
+
+ActionView::Template::Error (uninitialized constant ApplicationHelper::FAYE_TOKEN):
+    1: <% broadcast "/messages/new" do  %>
+    2: $("#chat").append("<%= escape_javascript render(@message) %>");
+    3: <% end %>
+    4: $("#new_message")[0].reset();
+  app/helpers/application_helper.rb:5:in `broadcast'
+  app/views/messages/create.js.erb:1:in `_app_views_messages_create_js_erb___666819080_78961590_226027888'
+
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /usr/local/rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.0ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:43 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"哈哈"}, "commit"=>"Send Message"}
+  [1m[36mSQL (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (1.2ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('哈哈', '2011-08-21 07:46:44', '2011-08-21 07:46:44')
+  [1m[36mSQL (16.9ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (4.6ms)
+Rendered messages/create.js.erb (14.1ms)
+Completed 200 OK in 139ms (Views: 18.9ms | ActiveRecord: 22.4ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:45 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8k/U4Wn4Og5pgngoR7oygC2OL8IqrAGyonzrQvP5gdk=", "message"=>{"content"=>"哈哈"}, "commit"=>"Send Message"}
+  [1m[35mSQL (1.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('哈哈', '2011-08-21 07:46:45', '2011-08-21 07:46:45')
+  [1m[36mSQL (81.1ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (0.9ms)
+Rendered messages/create.js.erb (8.2ms)
+Completed 200 OK in 122ms (Views: 15.0ms | ActiveRecord: 83.4ms)
+
+
+Started POST "/messages" for 192.168.1.16 at 2011-08-21 15:46:55 +0800
+  Processing by MessagesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioYUmetiMDIEhVFuDuq0YxJVc0g5YkrVplvISKSYyJA=", "message"=>{"content"=>"果然和厉害。 "}, "commit"=>"Send Message"}
+  [1m[35mSQL (1.7ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `messages`[0m
+  [1m[35mAREL (0.7ms)[0m  INSERT INTO `messages` (`content`, `created_at`, `updated_at`) VALUES ('果然和厉害。 ', '2011-08-21 07:46:55', '2011-08-21 07:46:55')
+  [1m[36mSQL (2.5ms)[0m  [1mCOMMIT[0m
+Rendered messages/_message.html.erb (1.0ms)
+Rendered messages/create.js.erb (8.7ms)
+Completed 200 OK in 40ms (Views: 13.3ms | ActiveRecord: 5.4ms)
